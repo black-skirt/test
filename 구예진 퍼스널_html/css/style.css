@@ -1,0 +1,318 @@
+/*-------------------------------------------------
+Style Sheet
+Version : 1.1
+Author :  Da-Vin Ha
+Create date : 2023. 01. 13. Da-Vin Ha
+-------------------------------------------------*/
+
+/* Layout */
+html {
+  font-size: 8px;
+}
+body {
+  background-image: url(../images/main/background.jpg);
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+.header,
+.portFolio,
+footer p {
+}
+.header {
+  background-position: left center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  padding: 12.5rem 25rem;
+  position: relative;
+}
+.header .grab {
+}
+.header .title {
+  color: #000;
+  letter-spacing: -0.05em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  position: absolute;
+  top: calc(50% + 12.5rem);
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 48vw;
+}
+.header .title .link {
+  font-family: 'Sarabun-Bold';
+  color: #000;
+  font-size: 34px;
+  text-transform: capitalize;
+  letter-spacing: 0;
+  line-height: 1;
+  text-align: center;
+  border-radius: 42px;
+  padding: 24px 64px;
+  border: 1px solid #000;
+}
+.header .title .link:hover,
+.header .title .link:active,
+.header .title .link:focus {
+  border: 1px solid #222;
+  color: #222;
+}
+.header .title span {
+  font-size: 32px;
+  display: block;
+  color: #313434;
+  font-weight: 500;
+  line-height: 1.11;
+  letter-spacing: -0.05em;
+  margin-top: 10px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0;
+  font-family: 'Sarabun-Light', sans-serif, 맑은고딕, Malgun Gothic, '돋움',
+    Dotum, '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', sans-serif;
+  color: #000;
+}
+.header .nav {
+  clear: both;
+  text-align: left;
+  display: inline-block;
+  margin: 25px 0 125px;
+}
+.header .nav a {
+  font-size: 30px;
+  color: #ff106a;
+  display: inline-block;
+  font-weight: 400;
+  letter-spacing: 0;
+  background: #fff;
+  width: 167px;
+  line-height: 56px;
+  text-align: center;
+  border-radius: 200px;
+}
+.header .nav a:hover {
+  color: #fff;
+  background: #ff106a;
+}
+.header .headText {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+}
+.header .headText p.text {
+  color: #000;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  font-family: 'Sarabun-SemiBold', sans-serif, 맑은고딕, Malgun Gothic, '돋움',
+    Dotum, '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', sans-serif;
+}
+.header .headText .text a {
+  display: inline-block;
+  color: #fff;
+  line-height: inherit;
+}
+.header .headText .text1 {
+  text-transform: uppercase;
+}
+
+footer {
+  padding: 12.5rem 25rem;
+}
+footer img {
+  height: 4rem;
+  max-height: 32px;
+  min-height: 20px;
+}
+footer p i {
+  font-family: AppleGothic;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* Top */
+a.top {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  display: none;
+  z-index: 20;
+  background: #000;
+  padding: 10px 8px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 30px !important;
+
+  display: inline-block;
+}
+
+/* Portfolio */
+.portFolio {
+  padding-top: 100px;
+  padding: 25rem;
+}
+.port-title {
+  margin: 24rem 0 6rem;
+  font-size: 34px;
+  font-weight: 800;
+  color: #000;
+}
+.portFolio ul {
+  display: grid;
+  gap: 6rem;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  overflow: hidden;
+}
+
+.portFolio ul li .port-image {
+  background: #000;
+  position: relative;
+}
+.portFolio ul li .port-image .hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 35px;
+  text-align: center;
+  opacity: 0;
+}
+
+.portFolio ul li .port-image .dark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #0a73ef;
+  opacity: 0;
+}
+.portFolio ul li .port-image img {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.portFolio ul li > a:hover .hover {
+  opacity: 1;
+  z-index: 3;
+}
+
+/* **************************************** *
+ * Responsive
+ * **************************************** */
+
+/* PC */
+@media (max-width: 1920px) {
+  html {
+    font-size: 0.4166666vw;
+  }
+}
+
+@media (max-width: 1550px) {
+  footer,
+  .portFolio,
+  .header {
+    padding: 12rem 10rem;
+  }
+}
+
+/* PC */
+@media (max-width: 1300px) {
+  .header .title {
+    width: 58vw;
+  }
+}
+
+/* PC */
+@media (max-width: 1100px) {
+  .header .headText {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+
+  .portFolio ul {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 12rem;
+  }
+
+  .header .title {
+    width: 72vw;
+    gap: 8rem;
+  }
+  .header .title .link {
+    padding: 16px 40px;
+    font-size: 24px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 960px) {
+  .cntTop-wrap {
+    bottom: 10%;
+    right: 6rem;
+  }
+  .cntTop-wrap img {
+    width: 100px;
+  }
+  .header .headText p.text {
+    font-size: 14px;
+    line-height: 150%;
+  }
+  .description {
+    font-size: 13px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .header .headText {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+  .br_tag {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .cntTop-wrap img {
+    width: 60px;
+  }
+  .portFolio ul {
+    gap: 16rem;
+  }
+  .port-title {
+    margin: 32rem 0 9rem;
+    font-size: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 460px) {
+}
+
+/* Mobile */
+@media (max-width: 380px) {
+  .header .headText {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5rem;
+  }
+}
