@@ -59,8 +59,8 @@ footer p {
 .header .title .link:hover,
 .header .title .link:active,
 .header .title .link:focus {
-  border: 1px solid #222;
-  color: #222;
+  border: 1px solid #fff;
+  color: #fff;
 }
 .header .title span {
   font-size: 32px;
