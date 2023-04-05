@@ -9,59 +9,55 @@ Create date : 2023. 01. 13. Da-Vin Ha
 html {
   font-size: 8px;
 }
-body {
-  background-image: url(../images/main/background.jpg);
-  background-position: center;
-  background-repeat: repeat-y;
-  background-size: cover;
-}
+/* body {
+} */
 .header,
 .portFolio,
 footer p {
-}
-.header {
-  background-position: left center;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-  padding: 12.5rem 25rem;
-  position: relative;
-}
-.header .grab {
-}
-.header .title {
-  color: #000;
-  letter-spacing: -0.05em;
-  text-align: center;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
-  position: absolute;
-  top: calc(50% + 12.5rem);
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  width: 48vw;
 }
-.header .title .link {
-  font-family: 'Sarabun-Bold';
-  color: #000;
-  font-size: 34px;
-  text-transform: capitalize;
-  letter-spacing: 0;
-  line-height: 1;
-  text-align: center;
-  border-radius: 42px;
-  padding: 24px 64px;
-  border: 1px solid #000;
+.header {
+  height: 100vh;
+  background: url(../images/main/visual_bg.jpg) no-repeat;
+  background-position: right center;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20rem;
 }
-.header .title .link:hover,
-.header .title .link:active,
-.header .title .link:focus {
-  border: 1px solid #fff;
-  color: #fff;
+
+.header .title {
+  width: 137rem;
 }
+.header .link {
+  background: url(../images/main/visual_resume.png) no-repeat center;
+  background-size: cover;
+  width: 220px;
+  height: 220px;
+  animation: rotate-ani 8s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes rotate-ani {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* .header .link:hover,
+.header .link:active,
+.header .link:focus {
+  color: #007bf7;
+  background: #fff;
+} */
 .header .title span {
   font-size: 32px;
   display: block;
@@ -71,14 +67,7 @@ footer p {
   letter-spacing: -0.05em;
   margin-top: 10px;
 }
-
-.description {
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0;
-  font-family: 'Sarabun-Light', sans-serif, 맑은고딕, Malgun Gothic, '돋움',
-    Dotum, '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', sans-serif;
-  color: #000;
+.header .title img {
 }
 .header .nav {
   clear: both;
@@ -103,18 +92,15 @@ footer p {
   background: #ff106a;
 }
 .header .headText {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   text-align: left;
+  position: relative;
+  bottom: 12rem;
 }
-.header .headText p.text {
-  color: #000;
-  font-size: 18px;
-  line-height: 24px;
+.header .headText .text {
+  color: #6f18c8;
+  font-size: 20px;
+  line-height: 38px;
   font-weight: 500;
-  font-family: 'Sarabun-SemiBold', sans-serif, 맑은고딕, Malgun Gothic, '돋움',
-    Dotum, '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', sans-serif;
 }
 .header .headText .text a {
   display: inline-block;
@@ -126,12 +112,17 @@ footer p {
 }
 
 footer {
-  padding: 12.5rem 25rem;
 }
-footer img {
-  height: 4rem;
-  max-height: 32px;
-  min-height: 20px;
+footer p {
+  font-size: 22px;
+  color: #6f18c8;
+  width: 100%;
+  font-weight: 600;
+  line-height: 200px;
+  text-align: left;
+  background: url(../images/main/footer_bg.jpg) no-repeat;
+  background-size: cover;
+  text-transform: uppercase;
 }
 footer p i {
   font-family: AppleGothic;
@@ -153,29 +144,24 @@ a.top {
   font-weight: bold;
   letter-spacing: 1px;
   border: 30px !important;
-
+  /* display: ; */
   display: inline-block;
 }
 
 /* Portfolio */
 .portFolio {
-  padding-top: 100px;
-  padding: 25rem;
-}
-.port-title {
-  margin: 24rem 0 6rem;
-  font-size: 34px;
-  font-weight: 800;
-  color: #000;
+  padding: 17.5rem 23rem;
 }
 .portFolio ul {
-  display: grid;
-  gap: 6rem;
-  grid-template-columns: repeat(2, 1fr);
   width: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 17.5rem;
 }
-
+.portFolio ul li {
+  width: 100%;
+}
 .portFolio ul li .port-image {
   background: #000;
   position: relative;
@@ -188,131 +174,194 @@ a.top {
   height: 100%;
   font-size: 35px;
   text-align: center;
-  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #00000000;
 }
 
-.portFolio ul li .port-image .dark {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: #0a73ef;
-  opacity: 0;
+.portFolio ul li .port-image .hover .port-title {
+  font-family: BUTTERSHINE-SERIF;
+  font-size: 70px;
+  line-height: 1.2;
 }
+
+.portFolio ul li .port-image .hover .port-info {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: Roboto-Regular;
+}
+.portFolio ul li .port-image .vertical br {
+  line-height: 50px;
+}
+
 .portFolio ul li .port-image img {
   width: 100%;
   display: block;
-  box-sizing: border-box;
-  overflow: hidden;
 }
 
 .portFolio ul li > a:hover .hover {
-  opacity: 1;
-  z-index: 3;
+  background-color: #00000040;
 }
 
 /* **************************************** *
  * Responsive
  * **************************************** */
 
-/* PC */
 @media (max-width: 1920px) {
   html {
-    font-size: 0.4166666vw;
+    font-size: 0.41666vw;
   }
 }
-
+/* PC */
 @media (max-width: 1550px) {
-  footer,
-  .portFolio,
-  .header {
-    padding: 12rem 10rem;
+  footer p {
+    font-size: 22px;
+    line-height: 130px;
+  }
+
+  .cntTop-wrap img {
+    width: 105px;
   }
 }
 
 /* PC */
 @media (max-width: 1300px) {
+  .header {
+    gap: 12rem;
+    justify-content: center;
+    padding-top: 12rem;
+  }
+
   .header .title {
-    width: 58vw;
+    width: 140rem;
+  }
+  .header .headText {
+    bottom: 4rem;
+  }
+
+  footer p {
+    font-size: 20px;
+    line-height: 100px;
+  }
+
+  .cntTop-wrap img {
+    width: 90px;
   }
 }
 
 /* PC */
 @media (max-width: 1100px) {
-  .header .headText {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
-  }
-
-  .portFolio ul {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 12rem;
-  }
-
-  .header .title {
-    width: 72vw;
-    gap: 8rem;
-  }
-  .header .title .link {
-    padding: 16px 40px;
-    font-size: 24px;
+  footer p {
+    line-height: 90px;
+    font-size: 19px;
   }
 }
 
 /* Tablet */
 @media (max-width: 960px) {
-  .cntTop-wrap {
-    bottom: 10%;
-    right: 6rem;
+  .portFolio {
+    padding: 0;
   }
+
+  .portFolio ul {
+    width: 120%;
+    gap: 0;
+    overflow: hidden;
+  }
+  .portFolio ul li {
+    height: 120rem;
+  }
+  .portFolio ul li .port-image img {
+    height: 100%;
+  }
+  .portFolio ul li .port-image {
+    height: 100%;
+  }
+  .header .title {
+    width: 200rem;
+  }
+  .header .link {
+    width: 160px;
+    height: 160px;
+  }
+
+  footer p {
+    font-size: 16px;
+    line-height: 80px;
+  }
+
   .cntTop-wrap img {
-    width: 100px;
+    width: 85px;
   }
-  .header .headText p.text {
-    font-size: 14px;
-    line-height: 150%;
-  }
-  .description {
-    font-size: 13px;
+  .cntTop-wrap {
+    right: 13px;
   }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-  .header .headText {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5rem;
+  footer p {
+    line-height: 70px;
+    font-size: 14px;
   }
-  .br_tag {
-    display: none;
+  .cntTop-wrap img {
+    width: 70px;
+  }
+  .header .link {
+    width: 120px;
+    height: 120px;
   }
 }
 
 /* Mobile */
 @media (max-width: 640px) {
+  .portFolio ul li .port-image .hover .port-title {
+    font-size: 32px;
+  }
+
+  .portFolio ul li .port-image .hover .port-info {
+    font-size: 16px;
+  }
+
+  .header .headText .text {
+    font-size: 14px;
+  }
+
+  footer {
+    margin-top: 0px;
+  }
+  footer p {
+    font-size: 13px;
+  }
+
   .cntTop-wrap img {
     width: 60px;
-  }
-  .portFolio ul {
-    gap: 16rem;
-  }
-  .port-title {
-    margin: 32rem 0 9rem;
-    font-size: 24px;
   }
 }
 
 /* Mobile */
 @media (max-width: 460px) {
+  footer p {
+    font-size: 12px;
+    line-height: 60px;
+    margin-top: 0;
+  }
+
+  .cntTop-wrap {
+    right: 8px;
+    bottom: 30px;
+  }
 }
 
 /* Mobile */
 @media (max-width: 380px) {
-  .header .headText {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 5rem;
+  footer p {
+    font-size: 11px;
+    line-height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }

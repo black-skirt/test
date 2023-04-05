@@ -3,36 +3,46 @@
 /*-------------------------------------------------
 Common Style Sheet
 Version : 1.1
+Author :  Da-Vin Ha
+Create date : 2023. 1. 13. Da-Vin Ha
 -------------------------------------------------*/
 
 /* **************************************** *
  * FONT
  * **************************************** */
 @font-face {
-  font-family: 'Sarabun-Bold';
-  src: url('fonts/Sarabun-Bold.eot');
-  src: url('fonts/Sarabun-Bold.woff2') format('woff2'),
-    url('fonts/Sarabun-Bold.woff') format('woff'),
-    url('fonts/Sarabun-Bold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Sarabun-SemiBold';
-  src: url('fonts/Sarabun-SemiBold.eot');
-  src: url('fonts/Sarabun-SemiBold.woff2') format('woff2'),
-    url('fonts/Sarabun-SemiBold.woff') format('woff'),
-    url('fonts/Sarabun-SemiBold.ttf') format('truetype');
+  font-family: 'BUTTERSHINE-SERIF';
+  src: url('fonts/BUTTERSHINE-SERIF.eot');
+  src: url('fonts/BUTTERSHINE-SERIF.eot?#iefix') format('embedded-opentype'),
+    url('fonts/BUTTERSHINE-SERIF.woff2') format('woff2'),
+    url('fonts/BUTTERSHINE-SERIF.woff') format('woff'),
+    url('fonts/BUTTERSHINE-SERIF.ttf') format('truetype');
+  /* url('fonts/NewYorkExtraLarge-Regular.svg#notokr-black') format('svg'); */
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Sarabun-Light';
-  font-family: 'Sarabun-Light';
-  src: url('fonts/Sarabun-Light.woff2') format('woff2'),
-    url('fonts/Sarabun-Light.woff') format('wof3'),
-    url('fonts/Sarabun-Light.ttf') format('true3ype');
+  font-family: 'Maglonyfreeversion-Regular';
+  src: url('fonts/Maglonyfreeversion-Regular.eot');
+  src: url('fonts/Maglonyfreeversion-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('fonts/Maglonyfreeversion-Regular.woff2') format('woff2'),
+    url('fonts/Maglonyfreeversion-Regular.woff') format('woff'),
+    url('fonts/Maglonyfreeversion-Regular.ttf') format('truetype');
+  /* url('fonts/NewYorkExtraLarge-Regular.svg#notokr-black') format('svg'); */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('fonts/Roboto-Regular.eot');
+  src: url('fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Roboto-Regular.woff2') format('woff2'),
+    url('fonts/Roboto-Regular.woff') format('woff'),
+    url('fonts/Roboto-Regular.ttf') format('truetype');
+  /* url('fonts/NewYorkExtraLarge-Regular.svg#notokr-black') format('svg'); */
   font-weight: normal;
   font-style: normal;
 }
@@ -41,8 +51,8 @@ Version : 1.1
  * Common Style
  * **************************************** */
 * {
-  font-family: 'Sarabun-SemiBold', sans-serif, 맑은고딕, Malgun Gothic, '돋움',
-    Dotum, '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', sans-serif;
+  font-family: 'Pretendard', sans-serif, 맑은고딕, Malgun Gothic, '돋움', Dotum,
+    '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', sans-serif;
   box-sizing: border-box;
   -webkit-transition: all 0.6s ease-out;
   -o-transition: all 0.6s ease-out;
@@ -385,7 +395,16 @@ img {
 .cntTop-wrap #cntTop:hover,
 .cntTop-wrap #cntTop:focus,
 .cntTop-wrap #cntTop:active {
-  opacity: 0.66;
+  background-image: url(../images/common/ico_top_Hover.png);
+}
+.top-icon {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-image: url(../images/common/ico_top.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* hidden */
@@ -407,5 +426,13 @@ img {
   }
   .mb0 {
     margin-bottom: 0 !important;
+  }
+
+  .cntTop-wrap #cntTop {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    letter-spacing: 1px;
+    font-size: 9.5px;
   }
 }
