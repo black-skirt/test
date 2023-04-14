@@ -10,42 +10,6 @@ Create date : 2023. 1. 13. Da-Vin Ha
 /* **************************************** *
  * FONT
  * **************************************** */
-@font-face {
-  font-family: 'BUTTERSHINE-SERIF';
-  src: url('fonts/BUTTERSHINE-SERIF.eot');
-  src: url('fonts/BUTTERSHINE-SERIF.eot?#iefix') format('embedded-opentype'),
-    url('fonts/BUTTERSHINE-SERIF.woff2') format('woff2'),
-    url('fonts/BUTTERSHINE-SERIF.woff') format('woff'),
-    url('fonts/BUTTERSHINE-SERIF.ttf') format('truetype');
-  /* url('fonts/NewYorkExtraLarge-Regular.svg#notokr-black') format('svg'); */
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Maglonyfreeversion-Regular';
-  src: url('fonts/Maglonyfreeversion-Regular.eot');
-  src: url('fonts/Maglonyfreeversion-Regular.eot?#iefix')
-      format('embedded-opentype'),
-    url('fonts/Maglonyfreeversion-Regular.woff2') format('woff2'),
-    url('fonts/Maglonyfreeversion-Regular.woff') format('woff'),
-    url('fonts/Maglonyfreeversion-Regular.ttf') format('truetype');
-  /* url('fonts/NewYorkExtraLarge-Regular.svg#notokr-black') format('svg'); */
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Roboto-Regular';
-  src: url('fonts/Roboto-Regular.eot');
-  src: url('fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
-    url('fonts/Roboto-Regular.woff2') format('woff2'),
-    url('fonts/Roboto-Regular.woff') format('woff'),
-    url('fonts/Roboto-Regular.ttf') format('truetype');
-  /* url('fonts/NewYorkExtraLarge-Regular.svg#notokr-black') format('svg'); */
-  font-weight: normal;
-  font-style: normal;
-}
 
 /* **************************************** *
  * Common Style
@@ -383,30 +347,6 @@ img {
   top: 12px;
 }
 
-/* TOP */
-.cntTop-wrap {
-  position: fixed;
-  right: 20px;
-  bottom: 45%;
-  z-index: 100;
-}
-.cntTop-wrap #cntTop {
-}
-.cntTop-wrap #cntTop:hover,
-.cntTop-wrap #cntTop:focus,
-.cntTop-wrap #cntTop:active {
-  background-image: url(../images/common/ico_top_Hover.png);
-}
-.top-icon {
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  background-image: url(../images/common/ico_top.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 /* hidden */
 .sr_only {
   position: absolute !important;
@@ -426,13 +366,5 @@ img {
   }
   .mb0 {
     margin-bottom: 0 !important;
-  }
-
-  .cntTop-wrap #cntTop {
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    letter-spacing: 1px;
-    font-size: 9.5px;
   }
 }
